@@ -27,13 +27,16 @@ jobs:
       
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v1.0.2
+      
     - name: Restore NuGet Packages
       run: nuget restore BankAccount.sln
       
     - name: Build App  
       run: msbuild BankAccount.sln /p:Configuration=Release
-    - name: Set up-VSTest
-      uses: Malcomnixon/Setup-VSTest@V2
+      
+    - name: Set up VSTest
+      uses: Malcolmnixon/Setup-VSTest@V2
+      
     - name: Run VSTest
       run: vstest.console BankAccountTests\bin\Debug\BankAccountTests.dll 
 
