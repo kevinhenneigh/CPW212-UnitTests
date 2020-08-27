@@ -35,7 +35,7 @@ jobs:
       run: msbuild BankAccount.sln /p:Configuration=Release
       
     - name: Set up VSTest
-      uses: Malcolmnixon/Setup-VSTest@V2
+      uses: Malcolmnixon/Setup-VSTest@v2
       
     - name: Run VSTest
       run: vstest.console BankAccountTests\bin\Debug\BankAccountTests.dll 
